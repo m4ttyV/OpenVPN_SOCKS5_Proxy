@@ -1,0 +1,11 @@
+client
+dev tun
+proto udp
+
+remote YOUR_VPN_SERVER 1194
+
+# Password for encrypted private key
+askpass /vpn/vpn.pass
+
+# Add your VPN-specific CA/certificate/key configuration below.
+# Do not commit real private keys or credentials.

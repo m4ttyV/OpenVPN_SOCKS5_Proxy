@@ -1,0 +1,30 @@
+# OpenVPN secrets / configs
+vpn/vpn.ovpn
+vpn/vpn.pass
+
+# Certificates and private keys
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak

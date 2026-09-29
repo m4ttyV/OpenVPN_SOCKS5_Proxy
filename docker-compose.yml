@@ -1,0 +1,19 @@
+services:
+  openvpn:
+    build: .
+    container_name: vpn-proxy
+
+    cap_add:
+      - NET_ADMIN
+
+    devices:
+      - /dev/net/tun:/dev/net/tun
+
+    ports:
+      - "127.0.0.1:1080:1080"
+
+    volumes:
+      - ./vpn/vpn.ovpn:/vpn/vpn.ovpn:ro
+      - ./vpn/vpn.pass:/vpn/vpn.pass:ro
+
+    restart: unless-stopped
