@@ -81,14 +81,16 @@ Tested primarily with Docker Desktop on Windows.
 vpn-proxy/
 ├── Dockerfile
 ├── docker-compose.yml
-├── danted.conf
 ├── start.sh
 ├── .gitignore
 ├── README.md
+├── LICENSE
 └── vpn/
-    ├── vpn.ovpn
-    └── vpn.pass
+    ├── vpn.ovpn.example
+    └── vpn.pass.example
 ```
+The Dante configuration is generated dynamically by `start.sh`
+after the OpenVPN `tun0` interface becomes available.
 
 The real VPN configuration and credentials should **not** be committed to Git.
 
