@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -eu
 
 echo "[vpn-proxy] Starting OpenVPN..."
 
