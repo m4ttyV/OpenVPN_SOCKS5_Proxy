@@ -10,7 +10,8 @@ services:
       - /dev/net/tun:/dev/net/tun
 
     ports:
-      - "127.0.0.1:1080:1080"
+      - "127.0.0.1:1080:1080/tcp"
+      - "127.0.0.1:20000-20030:20000-20030/udp"
 
     volumes:
       - ./vpn/vpn.ovpn:/vpn/vpn.ovpn:ro
