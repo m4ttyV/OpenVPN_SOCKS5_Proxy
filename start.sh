@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eu
+set -e
 
 echo "[vpn-proxy] Starting OpenVPN..."
 
@@ -52,6 +52,7 @@ client pass {
 
 socks pass {
     from: 0.0.0.0/0 to: 0.0.0.0/0
+	udp.portrange: 20000 - 20030
 }
 EOF
 
